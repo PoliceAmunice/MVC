@@ -1,0 +1,23 @@
+{
+    "name": "policeamunice/mvc",
+    "type": "project",
+    "license": "private",
+    "require": {
+        "symfony/yaml": "^6.1",
+        "twig/twig": "^3.4"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Policeamunice\\MVC\\": "src-server/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sundov Eugene",
+            "email": "sundov97@gmail.com"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./configs/docker/dockerfile
+      target: web
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/app/
+      - ./configs/docker/default.conf:/etc/docker/conf.d/default.conf
+    links:
+      - php
+
+  php:
+    build:
+      context: .
+      dockerfile: ./configs/docker/dockerfile
+      target: php
+    volumes:
+      - .:/app/
+      - ./configs/docker/php-fpm.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ./src-server/Resources/templates:/app/public/templates

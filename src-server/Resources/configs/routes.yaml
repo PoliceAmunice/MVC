@@ -1,0 +1,9 @@
+main:
+  controller:
+    \Policeamunice\MVC\Controllers\MainController
+
+contacts:
+  controller:
+    \Policeamunice\MVC\Controllers\ContactsController
+  actions:
+    - feedback
