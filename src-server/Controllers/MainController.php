@@ -8,6 +8,11 @@ class MainController extends Controller
 {
     public function index()
     {
-        $this->view->render('main.html', []);
+        $readme = file_get_contents('./README.md');
+        $Parsedown = new \Parsedown();
+        $parsedReadme = $Parsedown->text($readme);
+        $this->view->render('main.html', [
+            'readme' => $parsedReadme,
+        ]);
     }
 }
