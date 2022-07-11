@@ -1,9 +1,18 @@
 main:
   controller:
     \Policeamunice\MVC\Controllers\MainController
+  actions:
+    - index
 
 contacts:
   controller:
     \Policeamunice\MVC\Controllers\ContactsController
   actions:
+    - index
     - feedback
+
+404:
+  controller:
+    \Policeamunice\MVC\Controllers\NotFoundController
+  actions:
+    - index
