@@ -1,0 +1,32 @@
+{% extends "base/base.html.twig" %}
+
+{% block title %}Votes page{% endblock %}
+
+{% block content %}
+    <h1>Have a look at those Votes!</h1>
+    <p class="finger-down">👇</p>
+
+    {% set dotes %}
+        <div class="dotes-decorator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    {% endset %}
+
+    {% for vote in votes %}
+        {% if not loop.first %}
+            {{ dotes }}
+        {% endif %}
+        <arcticle class="vote">
+            <header>
+                <img src="/assets/voter_{{ loop.index }}.png" alt="{{ vote.name }}">
+                <h3>{{ vote.name }}</h3>
+            </header>
+            <blockquote>{{ vote.message }}</blockquote>
+            <sub>
+                <span>{{ vote.date }}</span>
+            </sub>
+        </arcticle>
+    {% endfor %}
+{% endblock %}

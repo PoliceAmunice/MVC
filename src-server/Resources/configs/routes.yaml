@@ -11,15 +11,9 @@ contacts:
     - index
     - feedback
 
-portfolio:
+votes:
   controller:
-    \Policeamunice\MVC\Controllers\PortfolioController
-  actions:
-    - index
-
-service:
-  controller:
-    \Policeamunice\MVC\Controllers\ServiceController
+    \Policeamunice\MVC\Controllers\VotesController
   actions:
     - index
 
