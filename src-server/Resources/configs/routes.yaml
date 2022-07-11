@@ -11,6 +11,18 @@ contacts:
     - index
     - feedback
 
+portfolio:
+  controller:
+    \Policeamunice\MVC\Controllers\PortfolioController
+  actions:
+    - index
+
+service:
+  controller:
+    \Policeamunice\MVC\Controllers\ServiceController
+  actions:
+    - index
+
 404:
   controller:
     \Policeamunice\MVC\Controllers\NotFoundController
